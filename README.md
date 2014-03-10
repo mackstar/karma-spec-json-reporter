@@ -1,0 +1,1 @@
+# Karma JSON spec reporter

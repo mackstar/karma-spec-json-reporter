@@ -27,15 +27,13 @@ describe("Reporter", function() {
 		expect(output).toEqual(expectedOutput);
 	});
 
-	it("should nest tests that have multiple suites", function() {
+	it("should flatten nested tests that have multiple suites", function() {
 		var input = testObject();
 		input.suite.push("a second suite");
 		parseResult(input);
 		var expectedOutput = {
-			"a suite" : {
-				"a second suite" : {
-					"a description" : "PASSED"
-				}
+			"a suite a second suite" : {
+				"a description" : "PASSED"
 			}
 		}
 		expect(output).toEqual(expectedOutput);

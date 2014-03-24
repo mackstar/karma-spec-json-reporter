@@ -8,13 +8,12 @@ var parseResult,
 
     function getCurrentOutputPointer(suite) {
         var current = output,
-            i;
-        for (i = 0; i < suite.length; i += 1) {
-            if (current[suite[i]] === undefined) {
-                current[suite[i]] = {};
-            }
-            current = current[suite[i]];
+            key = suite.join(' ');
+
+        if (current[key] === undefined) {
+            current[key] = {};
         }
+        current = current[key];
         return current;
     }
 

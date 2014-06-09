@@ -13,7 +13,6 @@ This is a karma reporter that will export your test data in the form of JSON but
     }
 }
 
-
 ```
 
 ## Installation
